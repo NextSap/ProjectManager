@@ -29,7 +29,7 @@ public class InteractiveShell {
                 case 1 -> command1();
                 case 2 -> command2();
                 case 3 -> command3();
-                case 4 -> command4(environment.get("SERVICE_PORT"));
+                case 4 -> command4(environment.get("server.port"));
                 case 5 -> command5(environment);
                 default ->
                         print("${red}ERREUR: Option invalide${reset} (Tapez 1 pour afficher les options disponibles)");
