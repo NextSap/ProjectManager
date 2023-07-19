@@ -49,8 +49,9 @@ public class Util {
         }
     }
 
-    public boolean exec(String command, boolean withOutput) {
+    public boolean exec(String command, boolean withOutput, long waitTime) {
         try {
+            Thread.sleep(waitTime);
             Process process = new ProcessBuilder("/bin/bash", "-c", command).start();
 
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
