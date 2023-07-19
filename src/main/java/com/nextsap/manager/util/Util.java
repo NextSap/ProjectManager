@@ -49,8 +49,9 @@ public class Util {
         }
     }
 
-    public boolean exec(String command, boolean withOutput) {
+    public boolean exec(String command, boolean withOutput, long waitTime) {
         try {
+            Thread.sleep(waitTime);
             Process process = new ProcessBuilder("/bin/bash", "-c", command).start();
 
             BufferedReader inputReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -89,6 +90,10 @@ public class Util {
         properties.keySet().forEach(key -> environment.put(key.toString(), properties.getProperty(key.toString())));
 
         return environment;
+    }
+
+    public String getArgValue(String arg) {
+        return arg.split("=")[1];
     }
 
     public static Util getInstance() {

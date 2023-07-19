@@ -1,25 +1,32 @@
 package com.nextsap.manager.util;
 
+import com.nextsap.manager.object.InputReaderArgs;
+
 import java.util.Scanner;
 
 public class InputReaderUtil {
 
     private static final Scanner SCAN = new Scanner(System.in);
     private static final InputReaderUtil INSTANCE = new InputReaderUtil();
+
     private InputReaderUtil() {
 
     }
 
     /**
-     * Return the
-     * @return number written to the console by the user
+     * Read the user input
+     * @return InputReaderArgs
      */
-    public int readSelection() {
+    public InputReaderArgs readSelection() {
+        InputReaderArgs inputReaderArgs = new InputReaderArgs();
         try {
-            return Integer.parseInt(SCAN.nextLine());
+            String input = SCAN.nextLine();
+            Integer.parseInt(input.split(" ")[0]);
+            inputReaderArgs.setArgs(input.split(" "));
         } catch (Exception e) {
-            return -1;
+            inputReaderArgs.setError(true);
         }
+        return inputReaderArgs;
     }
 
     public static InputReaderUtil getInstance() {
