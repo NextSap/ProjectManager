@@ -3,7 +3,7 @@ ProjectManager is a simple CLI tool to manage my Openclassrooms projects.
 
 ## Examples of use
 
-- <a href="https://github.com/NextSap/ProjectManager/tree/java.oc-5/README.md">Openclassrooms Project 5</a>
+- <a href="https://github.com/NextSap/ProjectManager/java.oc-6">Openclassrooms Project 6</a>
 
 ## Getting started
 
@@ -19,7 +19,7 @@ ProjectManager is a simple CLI tool to manage my Openclassrooms projects.
 - Place the complied jar file in the root directory of the project.
 - Execute the jar file with the following command:
 ```bash
-java -jar manager.jar
+java -jar Manager.jar
 ```
 - Follow the instructions (type 1 to see all the available commands)
 - Enjoy !
