@@ -22,7 +22,7 @@ public class InteractiveShell {
         InputReaderUtil inputReaderUtil = InputReaderUtil.getInstance();
         boolean exit = false;
 
-        util.print("${blue}Bienvenue dans le manager de l'application ${red}PAY MY BUDDY{blue} (P7)${reset}");
+        util.print("${blue}Bienvenue dans le manager de l'application ${red}PAY MY BUDDY${blue} (P6)${reset}");
 
         while (!exit) {
             util.print("${yellow}INFO: Veuillez saisir une option${reset} (Tapez 1 pour afficher les options disponibles)");
