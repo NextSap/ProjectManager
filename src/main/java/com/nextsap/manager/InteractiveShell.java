@@ -35,6 +35,7 @@ public class InteractiveShell {
             int option = Integer.parseInt(inputReaderArgs.getArgs()[0]);
             switch (option) {
                 case 0 -> {
+                    command3();
                     util.print("${blue}Arrêt du manager${reset}");
                     exit = true;
                 }
